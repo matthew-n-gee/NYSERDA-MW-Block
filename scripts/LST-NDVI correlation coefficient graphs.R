@@ -1,0 +1,30 @@
+library(readxl)
+ee_chart_Pre_Construction <- read_excel("ee-chart_Pre-Construction.xlsx")
+View(ee_chart_Pre_Construction)
+# 2010-14 Pre-Construction LST-NDVI Correlation Coefficient pixel frequency of
+# NYSERDA MW Block Solar Farms, 
+# Data Source: MODIS Satellite & NYSERDA, 
+# Processed in Google Earth Engine,
+# Data pixel frequency in Excel (in 'results' subdirectory)
+
+library(readxl)
+ee_chart_Post_Construction <- read_excel("ee-chart_Post-Construction.xlsx")
+View(ee_chart_Post_Construction)
+# 2018-22 Post-Construction LST-NDVI Correlation Coefficient pixel frequency of
+# NYSERDA MW Block Solar Farms, 
+# Data Source: MODIS Satellite & NYSERDA, 
+# Processed in Google Earth Engine,
+# Data pixel frequency in Excel (in 'results' subdirectory)
+
+library(ggplot2)
+# load R package for creating graphs
+
+ggplot(ee_chart_Pre_Construction, aes(x=LST_NDVI_correlation_coefficient,y=Percentage_of_pixels)) + 
+  geom_bar(aes(fill = LST_NDVI_correlation_coefficient), stat = "identity") +
+  scale_fill_gradient2(low = '#062686', mid = '#FFFFFF', high = '#931118', midpoint = 0)
+# Histogram of Pre-Construction LST-NDVI Correlation Coefficient pixel frequency
+
+ggplot(ee_chart_Post_Construction, aes(x=LST_NDVI_correlation_coefficient,y=Percentage_of_pixels)) + 
+  geom_bar(aes(fill = LST_NDVI_correlation_coefficient), stat = "identity") +
+  scale_fill_gradient2(low = '#062686', mid = '#FFFFFF', high = '#931118', midpoint = 0)
+# Histogram of Post-Construction LST-NDVI Correlation Coefficient pixel frequency
