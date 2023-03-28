@@ -5,16 +5,14 @@ output: github_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(readxl)
+library(tidyverse)
 ```
-
-## GitHub Documents
-
-This is an R Markdown format used for publishing markdown documents to GitHub. When you click the **Knit** button all R code chunks are run and a markdown file (.md) suitable for publishing to GitHub is generated.
 
 ## Gather Pixel Frequency from Excel
 ```{r}
-library(readxl)
-ee_chart_Pre_Construction <- read_excel("results/ee-chart_Pre-Construction.xlsx")
+ee_chart_Pre_Construction <- read_excel("~/GitHub/NYSERDA-MW-Block/results/ee-chart_Pre-Construction.xlsx")
 View(ee_chart_Pre_Construction)
 # 2010-14 Pre-Construction LST-NDVI Correlation Coefficient pixel frequency of
 # NYSERDA MW Block Solar Farms, 
@@ -24,8 +22,7 @@ View(ee_chart_Pre_Construction)
 ```
 
 ```{r}
-library(readxl)
-ee_chart_Post_Construction <- read_excel("results/ee-chart_Post-Construction.xlsx")
+ee_chart_Post_Construction <- read_excel("~/GitHub/NYSERDA-MW-Block/results/ee-chart_Post-Construction.xlsx")
 View(ee_chart_Post_Construction)
 # 2018-22 Post-Construction LST-NDVI Correlation Coefficient pixel frequency of
 # NYSERDA MW Block Solar Farms, 
