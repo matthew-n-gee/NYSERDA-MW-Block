@@ -64,5 +64,11 @@ ggplot(ee_chart_Post_Construction, aes(x=LST_NDVI_correlation_coefficient,y=Perc
 # Histogram of Post-Construction LST-NDVI Correlation Coefficient pixel frequency
 ```
 
-![Pixel Frequency Legend &
-Description](~/GitHub/NYSERDA-MW-Block/results/Pixel%20Frequency%20Legend.png)
+<div class="figure">
+
+<img src="../results/Pixel_Frequency_Legend.png" alt="Pixel Frequency Legend and Description" width="100%" />
+<p class="caption">
+Pixel Frequency Legend and Description
+</p>
+
+</div>
